@@ -1,12 +1,12 @@
 import functools
 import itertools
 
-class Human(object):
+"""class Human(object):
     # python object initializer
     def __init__(self, name:str, age:str, nationality:str) -> complex:
         self.name = name
         self.age = age
-        self.nationality = nationality
+        self.nationality = nationality """
         
 
 #  customized range function
