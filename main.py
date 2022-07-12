@@ -12,8 +12,19 @@ import itertools
 #  customized range function
 
 def Range(first:int, second:int=None, step:int=None) -> complex:
+    # condition for eqaul value
+    if first == second:
+        raise Exception("two value must not be eqal")
     
-    # condition for parameters
+    # condition for greater value
+    if first > second:
+        raise Exception("first value always greater than second value")
+    
+    # condition for step
+    if (second - first) < step:
+        raise Exception("Invalid Step! step should be appropriate value")
+
+    # condition for parameters when one fo this three is given or not hiven
     if second is None:
         startingPoint = 0
         value = first
