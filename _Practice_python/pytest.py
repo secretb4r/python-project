@@ -1,24 +1,22 @@
+class List(list):
+    def __new__(cls, LIST:set) -> set:
+        if isinstance([], list) == isinstance(LIST, list):
+            return super().__new__(cls,LIST)
+        else:
+            raise Exception("invalid type")
 
-# # python practice
-# class Mamals:
-#     def __init__(self):
-#         print("I am from base class")
+    # initializer for list object
+    def __init__(self, LIST:list) -> list:
+        self.list = LIST
     
-# class Human(Mamals):
-#     def __init__(self):
-#         super().__init__()
-#         print("i am from human class")
+    def __repr__(self):
+        return f"{self.list}"
+    
+    def _append(self, val1:any) -> list:
+        self.list[len(self.list): ] = [val1]
 
-# class Reptiles(Mamals):
-#     def __init__(self):
-#         super().__init__()
-#         print("this is from reptiles class")
-
-# class Lizard(Human, Reptiles):
-#     def __init__(self):
-#         super().__init__()
-#         print(" iam from Lizard class")
-
-
-# person = Lizard()
+first_list = [x for x in range(12)]
+first = List(first_list)
+first._append(23)
+print(first)
 
