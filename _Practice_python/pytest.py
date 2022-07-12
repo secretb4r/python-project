@@ -22,10 +22,3 @@
 
 # person = Lizard()
 
-first = [x for x in range(1, 23)]
-second = "this is a string"
-if isinstance([], list) == isinstance(second, list):
-    print("Ok")
-else:
-    print("Oops! you create an error")
-
