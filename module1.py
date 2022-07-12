@@ -10,15 +10,14 @@ class List:
     def __init__(self, LIST:list) -> list:
         # types should be same for this object
         # object type verification
-        if type([]) == type(LIST):
+        if isinstance([], list) == isinstance(LIST, list):
           self.list = LIST
         else:
             raise ValueError("Invalid Type")
         
     # representation of List object
     def __repr__(self):
-        Representation = self.list
-        return f"{Representation}"
+        return f"{self.list}"
 
     # def __str__(self):
     #   return f"{self.list}"
@@ -31,7 +30,7 @@ class List:
     def _index(self, value:any) -> int:
       # condition
       if value not in self.list:
-        return f"item not in list"
+        return "item not in list"
       # index verifier
       location = -1
       for item in self.list:
